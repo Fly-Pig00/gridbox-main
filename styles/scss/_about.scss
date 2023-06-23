@@ -1,0 +1,15 @@
+.about{
+  @apply flex flex-col space-y-10 sm:space-y-20 py-10 sm:py-20 items-center justify-center;
+
+  h1, h2{
+    @apply pb-3 sm:pb-5;
+  }
+
+  &__container{
+    @apply sm:flex sm:space-x-10;
+  }
+
+  &__image{
+    @apply flex-1 relative h-40 sm:h-auto mb-5 sm:mb-0;
+  }
+}

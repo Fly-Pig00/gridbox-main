@@ -1,0 +1,62 @@
+.product {
+  @apply py-10 sm:py-20;
+
+  &__main {
+    @apply grid md:grid-cols-2 gap-10 xl:gap-20 xl:max-w-6xl mx-auto;
+
+    &Img {
+      @apply h-max w-full;
+    }
+
+    &Description {
+      @apply md:flex-1 max-w-full flex flex-col space-y-5;
+
+      h1 {
+        @apply font-normal uppercase;
+      }
+      &--details {
+        @apply py-5 border-t border-b border-black;
+      }
+      a {
+        @apply flex pt-5 font-bold items-center justify-end;
+        svg {
+          @apply ml-2 fill-black;
+        }
+        &:hover {
+          @apply text-accent;
+          svg {
+            @apply fill-accent;
+          }
+        }
+      }
+    }
+  }
+
+  &__features {
+    @apply my-16 space-y-5 md:space-y-10 xl:max-w-6xl mx-auto;
+
+    h2 {
+      @apply uppercase font-normal text-center;
+    }
+
+    &Description {
+      @apply grid md:grid-cols-2 gap-5 md:gap-20 pb-10;
+    }
+
+    &Text {
+      @apply border-b pb-5 h-full flex flex-col justify-center border-black;
+    }
+    &Img {
+      @apply w-full h-full relative;
+    }
+  }
+
+  &__content {
+    .columns {
+      @apply gap-10;
+      & div {
+        @apply flex flex-col justify-center;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.home{
+
+  &__hero{
+    @apply h-screen relative;
+
+    &--slogan{
+      @apply relative text-center text-white top-40 font-light uppercase tracking-widest;
+    }
+    &--image{
+      @apply absolute w-full h-full top-0;
+    }
+  }
+  &__feature{
+    @apply relative h-screen flex flex-col justify-center items-center;
+
+    &--image{
+      @apply relative w-full h-3/5 z-10;
+    }
+
+    &--copy{
+      @apply relative z-10 max-w-xs text-base sm:text-2xl sm:max-w-lg font-light text-accent text-center uppercase pt-5 sm:pt-0;
+    }
+    &--grayBlock{
+      @apply flex justify-center w-full h-1/2 sm:h-2/5 absolute bottom-0 bg-secondary;
+      &>div{
+        @apply flex justify-center border-b h-full w-full sm:w-4/5 sm:m-auto;
+
+        &>div{
+          @apply border-t h-full w-11/12 sm:w-3/4;
+        }
+      }
+    }
+  }
+}
+
+.partners{
+  @apply py-20;
+
+  &__title{
+    @apply font-normal uppercase text-center mb-10 sm:mb-5 text-4xl;
+  }
+
+  &__logosContainer{
+    @apply grid sm:grid-cols-3 max-w-5xl mx-auto;
+  }
+
+  &__logo{
+    @apply relative w-48 h-40 grayscale hover:grayscale-0 mx-auto; 
+  }
+}

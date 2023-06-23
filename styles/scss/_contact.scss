@@ -1,0 +1,68 @@
+.contact {
+  @apply flex flex-col space-y-10 py-20;
+
+  .emails {
+    @apply text-accent;
+  }
+
+  &__form {
+    &--fieldGroup {
+      @apply sm:flex sm:space-x-10 mb-3;
+    }
+    &--field {
+      @apply border-b outline-0 p-1 bg-transparent border-black;
+
+      &Container {
+        @apply flex flex-col flex-1 py-2;
+
+        label {
+          @apply font-medium text-sm;
+        }
+        textArea {
+          @apply border-t border-l border-r;
+        }
+      }
+    }
+    &--error {
+      @apply text-error text-xs;
+
+      &Container {
+        @apply h-5 flex items-center;
+      }
+    }
+    &--button {
+      @apply bg-black text-white hover:bg-accent hover:opacity-30 rounded px-5 py-2 uppercase font-medium;
+    }
+  }
+
+  &__map {
+    @apply w-full sm:shadow-md rounded border-secondary sm:border overflow-hidden;
+    &--buttons {
+      @apply flex-1 hover:bg-accent hover:opacity-30 hover:text-white shadow-sm rounded-t-sm;
+    }
+    &--tabs {
+      @apply flex w-full h-10 sm:h-14 relative border border-secondary;
+    }
+    &Sales {
+      @apply rounded-t-sm relative z-10 -mt-1 shadow-md overflow-hidden;
+      &--tabs {
+        @apply flex h-8 space-x-1 sm:h-10 bg-primary rounded-t-sm border-t border-l border-r border-secondary;
+      }
+      &--buttons {
+        @apply min-w-[50px] w-max sm:px-3 sm:w-max shadow-md border-t border-l border-r border-secondary rounded-t-sm capitalize text-sm sm:whitespace-nowrap leading-3 sm:leading-normal hover:bg-accent hover:opacity-30;
+      }
+      &--mapContainer {
+        @apply h-full  relative bg-primary;
+      }
+    }
+    &Distributors {
+      @apply h-[279px] sm:h-[637px] relative bg-primary;
+    }
+  }
+
+  &__techSupport {
+    p {
+      @apply text-accent text-lg font-medium text-center;
+    }
+  }
+}

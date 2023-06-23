@@ -1,0 +1,24 @@
+// CHANGE COLOR OF QUESTION AND ARROUW ACTIVE STATE
+.accordion-button:not(.collapsed){
+    @apply
+    text-accent
+    ;
+    &::after{
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300aeef'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")
+    }
+}
+
+
+.faq{
+    @apply py-20 flex flex-col space-y-20;
+    &__accordion{
+        @apply space-y-5;
+
+        &--item{
+            @apply border-b border-t-0 border-l-0 border-r-0 rounded-none;
+        }
+        &--button{
+            @apply accordion-button w-full flex border-0 rounded-none py-5 text-left;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.downloads {
+  @apply flex flex-col space-y-10 py-10;
+
+  &__category {
+    @apply flex flex-col space-y-2;
+    &--title {
+      @apply border-b border-neutral-600;
+    }
+  }
+  &__link {
+    @apply text-black
+        max-w-max;
+    &:hover {
+      @apply underline;
+    }
+  }
+}
+
+.search {
+  &-container {
+    @apply input-group relative flex items-stretch w-full;
+  }
+  &--input {
+    @apply form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal  bg-neutral-100 bg-clip-padding rounded transition ease-in-out m-0 ring-neutral-200 outline-none shadow-sm border-none focus:ring-1;
+  }
+  &--button {
+    @apply btn px-6 py-2.5 bg-black text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-accent hover:shadow-lg focus:bg-accent focus:shadow-lg focus:outline-none focus:ring-0 active:bg-accent active:shadow-lg transition duration-150 ease-in-out flex items-center border-0;
+  }
+}

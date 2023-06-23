@@ -1,0 +1,378 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  .h0 {
+    @apply text-3xl font-bold md:text-5xl;
+  }
+  h1,
+  .h1 {
+    @apply text-2xl font-bold md:text-4xl;
+  }
+  h2,
+  .h2 {
+    @apply text-xl font-bold md:text-3xl;
+  }
+  h3,
+  .h3 {
+    @apply text-lg font-bold md:text-2xl;
+  }
+  h4,
+  .h4 {
+    @apply text-base font-bold md:text-lg;
+  }
+  body,
+  .p,
+  p {
+    @apply text-sm md:text-base min-h-[24px] text-black;
+  }
+  a {
+    @apply block;
+  }
+  header {
+    @apply relative z-40;
+  }
+  main {
+    @apply bg-primary min-h-screen;
+  }
+  footer {
+    @apply pt-10
+        pb-5
+        bg-secondary
+        flex
+        flex-col
+        justify-end
+        items-center
+        space-y-5;
+  }
+}
+@layer components {
+  .desktopNav {
+    @apply hidden sm:flex bg-secondary h-16 text-black;
+  }
+  .desktopNav > ul {
+    @apply menu menu-horizontal justify-end w-full text-black flex space-x-10 pr-5;
+  }
+  .desktopNav > ul > li {
+    @apply capitalize;
+  }
+  .desktopNav > ul > li > a {
+    @apply hover:text-accent bg-transparent p-0;
+  }
+  .mobileNav {
+    @apply sm:hidden flex justify-center bg-secondary w-full h-16 z-40;
+  }
+  .mobileNav-button {
+    @apply absolute top-5 right-5;
+  }
+  .mobileNav ul {
+    @apply fixed pt-10 bg-secondary flex-col items-center h-screen w-screen space-y-10 overflow-y-hidden;
+  }
+  .mobileNav ul > li {
+    @apply w-1/2;
+  }
+  .mobileNav ul > li > a {
+    @apply text-2xl hover:text-accent capitalize;
+  }
+  .page {
+    @apply mx-auto w-10/12 max-w-7xl;
+  }
+  .pageHeader {
+    @apply h-[100px] sm:h-[400px] relative flex py-20;
+  }
+  .footer__container {
+    @apply w-10/12 sm:flex;
+  }
+  .footer__logo {
+    @apply relative w-40 sm:w-52 h-20 sm:h-24;
+  }
+  .footer__links {
+    @apply flex-1 text-left sm:flex sm:space-x-20 justify-center;
+  }
+  .footer__links a {
+    @apply hover:text-accent;
+  }
+  .footer__socials {
+    @apply flex space-x-3 items-center sm:justify-center;
+  }
+  .headerLogo {
+    @apply relative w-40 h-full ml-5;
+  }
+  .subMenu span {
+    @apply bg-transparent hover:text-accent p-0;
+  }
+  .subMenu ul {
+    @apply bg-primary shadow;
+  }
+  .subMenu ul li a {
+    @apply bg-transparent hover:text-accent;
+  }
+  .subMenu-mobile h4,
+  .subMenu-mobile input {
+    @apply text-2xl capitalize font-normal p-0 min-h-0 h-10 col-start-1 row-start-1;
+  }
+  .subMenu-mobile div a {
+    @apply py-5 text-xl z-40;
+  }
+  .columns {
+    @apply grid gap-5 relative my-8;
+  }
+}
+.sanity-brand {
+  @apply bg-secondary;
+}
+
+.home__hero {
+  @apply h-screen relative;
+}
+.home__hero--slogan {
+  @apply relative text-center text-white top-40 font-light uppercase tracking-widest;
+}
+.home__hero--image {
+  @apply absolute w-full h-full top-0;
+}
+.home__feature {
+  @apply relative h-screen flex flex-col justify-center items-center;
+}
+.home__feature--image {
+  @apply relative w-full h-3/5 z-10;
+}
+.home__feature--copy {
+  @apply relative z-10 max-w-xs text-base sm:text-2xl sm:max-w-lg font-light text-accent text-center uppercase pt-5 sm:pt-0;
+}
+.home__feature--grayBlock {
+  @apply flex justify-center w-full h-1/2 sm:h-2/5 absolute bottom-0 bg-secondary;
+}
+.home__feature--grayBlock > div {
+  @apply flex justify-center border-b h-full w-full sm:w-4/5 sm:m-auto;
+}
+.home__feature--grayBlock > div > div {
+  @apply border-t h-full w-11/12 sm:w-3/4;
+}
+
+.partners {
+  @apply py-20;
+}
+.partners__title {
+  @apply font-normal uppercase text-center mb-10 sm:mb-5 text-4xl;
+}
+.partners__logosContainer {
+  @apply grid sm:grid-cols-3 max-w-5xl mx-auto;
+}
+.partners__logo {
+  @apply relative w-48 h-40 grayscale hover:grayscale-0 mx-auto;
+}
+
+.about {
+  @apply flex flex-col space-y-10 sm:space-y-20 py-10 sm:py-20 items-center justify-center;
+}
+.about h1, .about h2 {
+  @apply pb-3 sm:pb-5;
+}
+.about__container {
+  @apply sm:flex sm:space-x-10;
+}
+.about__image {
+  @apply flex-1 relative h-40 sm:h-auto mb-5 sm:mb-0;
+}
+
+.product {
+  @apply py-10 sm:py-20;
+}
+.product__main {
+  @apply grid md:grid-cols-2 gap-10 xl:gap-20 xl:max-w-6xl mx-auto;
+}
+.product__mainImg {
+  @apply h-max w-full;
+}
+.product__mainDescription {
+  @apply md:flex-1 max-w-full flex flex-col space-y-5;
+}
+.product__mainDescription h1 {
+  @apply font-normal uppercase;
+}
+.product__mainDescription--details {
+  @apply py-5 border-t border-b border-black;
+}
+.product__mainDescription a {
+  @apply flex pt-5 font-bold items-center justify-end;
+}
+.product__mainDescription a svg {
+  @apply ml-2 fill-black;
+}
+.product__mainDescription a:hover {
+  @apply text-accent;
+}
+.product__mainDescription a:hover svg {
+  @apply fill-accent;
+}
+.product__features {
+  @apply my-16 space-y-5 md:space-y-10 xl:max-w-6xl mx-auto;
+}
+.product__features h2 {
+  @apply uppercase font-normal text-center;
+}
+.product__featuresDescription {
+  @apply grid md:grid-cols-2 gap-5 md:gap-20 pb-10;
+}
+.product__featuresText {
+  @apply border-b pb-5 h-full flex flex-col justify-center border-black;
+}
+.product__featuresImg {
+  @apply w-full h-full relative;
+}
+.product__content .columns {
+  @apply gap-10;
+}
+.product__content .columns div {
+  @apply flex flex-col justify-center;
+}
+
+.contact {
+  @apply flex flex-col space-y-10 py-20;
+}
+.contact .emails {
+  @apply text-accent;
+}
+.contact__form--fieldGroup {
+  @apply sm:flex sm:space-x-10 mb-3;
+}
+.contact__form--field {
+  @apply border-b outline-0 p-1 bg-transparent border-black;
+}
+.contact__form--fieldContainer {
+  @apply flex flex-col flex-1 py-2;
+}
+.contact__form--fieldContainer label {
+  @apply font-medium text-sm;
+}
+.contact__form--fieldContainer textArea {
+  @apply border-t border-l border-r;
+}
+.contact__form--error {
+  @apply text-error text-xs;
+}
+.contact__form--errorContainer {
+  @apply h-5 flex items-center;
+}
+.contact__form--button {
+  @apply bg-black text-white hover:bg-accent hover:opacity-30 rounded px-5 py-2 uppercase font-medium;
+}
+.contact__map {
+  @apply w-full sm:shadow-md rounded border-secondary sm:border overflow-hidden;
+}
+.contact__map--buttons {
+  @apply flex-1 hover:bg-accent hover:opacity-30 hover:text-white shadow-sm rounded-t-sm;
+}
+.contact__map--tabs {
+  @apply flex w-full h-10 sm:h-14 relative border border-secondary;
+}
+.contact__mapSales {
+  @apply rounded-t-sm relative z-10 -mt-1 shadow-md overflow-hidden;
+}
+.contact__mapSales--tabs {
+  @apply flex h-8 space-x-1 sm:h-10 bg-primary rounded-t-sm border-t border-l border-r border-secondary;
+}
+.contact__mapSales--buttons {
+  @apply min-w-[50px] w-max sm:px-3 sm:w-max shadow-md border-t border-l border-r border-secondary rounded-t-sm capitalize text-sm sm:whitespace-nowrap leading-3 sm:leading-normal hover:bg-accent hover:opacity-30;
+}
+.contact__mapSales--mapContainer {
+  @apply h-full  relative bg-primary;
+}
+.contact__mapDistributors {
+  @apply h-[279px] sm:h-[637px] relative bg-primary;
+}
+.contact__techSupport p {
+  @apply text-accent text-lg font-medium text-center;
+}
+
+.accordion-button:not(.collapsed) {
+  @apply text-accent;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300aeef'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.faq {
+  @apply py-20 flex flex-col space-y-20;
+}
+.faq__accordion {
+  @apply space-y-5;
+}
+.faq__accordion--item {
+  @apply border-b border-t-0 border-l-0 border-r-0 rounded-none;
+}
+.faq__accordion--button {
+  @apply accordion-button w-full flex border-0 rounded-none py-5 text-left;
+}
+
+.downloads {
+  @apply flex flex-col space-y-10 py-10;
+}
+.downloads__category {
+  @apply flex flex-col space-y-2;
+}
+.downloads__category--title {
+  @apply border-b border-neutral-600;
+}
+.downloads__link {
+  @apply text-black
+        max-w-max;
+}
+.downloads__link:hover {
+  @apply underline;
+}
+
+.search-container {
+  @apply input-group relative flex items-stretch w-full;
+}
+.search--input {
+  @apply form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal  bg-neutral-100 bg-clip-padding rounded transition ease-in-out m-0 ring-neutral-200 outline-none shadow-sm border-none focus:ring-1;
+}
+.search--button {
+  @apply btn px-6 py-2.5 bg-black text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-accent hover:shadow-lg focus:bg-accent focus:shadow-lg focus:outline-none focus:ring-0 active:bg-accent active:shadow-lg transition duration-150 ease-in-out flex items-center border-0;
+}
+
+.press {
+  @apply py-10 flex flex-col space-y-5;
+}
+.press__thumbnail {
+  @apply w-full sm:w-1/3 mb-5 px-2 py-2 overflow-hidden h-[400px] sm:h-[300px]  hover:ring-1;
+}
+.press__thumbnail--container {
+  @apply flex flex-col sm:flex-row flex-wrap;
+}
+.press__thumbnail--image {
+  @apply relative w-full h-2/3 bg-secondary mb-3;
+}
+.press__thumbnail--title {
+  @apply group-hover:text-accent;
+}
+
+.article {
+  @apply py-10 flex flex-col space-y-5;
+}
+.article h2 {
+  @apply pb-5;
+}
+
+.sections {
+  @apply w-full h-[400px] sm:h-[640px] p-10 flex justify-center items-center;
+}
+.sections--image {
+  @apply relative h-full w-[1000px];
+}
+.sections--copy {
+  @apply max-w-5xl flex flex-col space-y-5;
+}
+.sections--copy h3 {
+  @apply text-xl sm:text-5xl capitalize font-normal italic;
+}
+.sections--copy p {
+  @apply font-normal;
+}
+.sections--copy a {
+  @apply w-max bg-accent px-3 py-2 ml-auto text-white;
+}
+
+/*# sourceMappingURL=globals.css.map */

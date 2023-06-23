@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .h0 {
+    @apply text-3xl font-bold md:text-5xl;
+  }
+
+  h1,
+  .h1 {
+    @apply text-2xl font-bold md:text-4xl;
+  }
+
+  h2,
+  .h2 {
+    @apply text-xl font-bold md:text-3xl;
+  }
+
+  h3,
+  .h3 {
+    @apply text-lg font-bold md:text-2xl;
+  }
+
+  h4,
+  .h4 {
+    @apply text-base font-bold md:text-lg;
+  }
+
+  body,
+  .p,
+  p {
+    @apply text-sm md:text-base min-h-[24px] text-black;
+  }
+
+  a {
+    @apply block; // tw-elements a tags are set to in-line
+  }
+
+  header {
+    @apply relative z-40;
+  }
+
+  main {
+    @apply bg-primary min-h-screen;
+  }
+
+  footer {
+    @apply pt-10
+        pb-5
+        bg-secondary
+        flex
+        flex-col
+        justify-end
+        items-center
+        space-y-5;
+  }
+}
+
+@layer components {
+  .desktopNav {
+    @apply hidden sm:flex bg-secondary h-16 text-black;
+
+    & > ul {
+      @apply menu menu-horizontal justify-end w-full text-black flex space-x-10 pr-5;
+
+      & > li {
+        @apply capitalize;
+
+        & > a {
+          @apply hover:text-accent bg-transparent p-0;
+        }
+      }
+    }
+  }
+
+  .mobileNav {
+    @apply sm:hidden flex justify-center bg-secondary w-full h-16 z-40;
+
+    &-button {
+      @apply absolute top-5 right-5;
+    }
+    ul {
+      @apply fixed pt-10 bg-secondary flex-col items-center h-screen w-screen space-y-10 overflow-y-hidden;
+      & > li {
+        @apply w-1/2;
+
+        & > a {
+          @apply text-2xl hover:text-accent capitalize;
+        }
+      }
+    }
+  }
+  .page {
+    @apply mx-auto w-10/12 max-w-7xl;
+  }
+  .pageHeader {
+    @apply h-[100px] sm:h-[400px] relative flex py-20;
+  }
+  .footer {
+    &__container {
+      @apply w-10/12 sm:flex;
+    }
+
+    &__logo {
+      @apply relative w-40 sm:w-52 h-20 sm:h-24;
+    }
+
+    &__links {
+      @apply flex-1 text-left sm:flex sm:space-x-20 justify-center;
+
+      a {
+        @apply hover:text-accent;
+      }
+    }
+    &__socials {
+      @apply flex space-x-3 items-center sm:justify-center;
+    }
+  }
+  .headerLogo {
+    @apply relative w-40 h-full ml-5;
+  }
+  .subMenu {
+    span {
+      @apply bg-transparent hover:text-accent p-0;
+    }
+    ul {
+      @apply bg-primary shadow;
+      li {
+        a {
+          @apply bg-transparent hover:text-accent;
+        }
+      }
+    }
+
+    &-mobile {
+      h4,
+      input {
+        @apply text-2xl capitalize font-normal p-0 min-h-0 h-10 col-start-1 row-start-1;
+      }
+      div {
+        a {
+          @apply py-5 text-xl z-40;
+        }
+      }
+    }
+  }
+
+  .columns {
+    @apply grid gap-5 relative my-8;
+  }
+}
+
+@import "./sanityStudio";
+@import "./home";
+@import "./about";
+@import "./product";
+@import "./contact";
+@import "./faq";
+@import "./downloads";
+@import "./press";
+@import "./sections";

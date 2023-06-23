@@ -1,0 +1,29 @@
+.press{
+  @apply py-10 flex flex-col space-y-5;
+
+  &__thumbnail{
+    @apply w-full sm:w-1/3 mb-5 px-2 py-2 overflow-hidden h-[400px] sm:h-[300px]  hover:ring-1;
+
+    &--container{
+      @apply flex flex-col sm:flex-row flex-wrap;
+    }
+
+    &--image{
+      @apply relative w-full h-2/3 bg-secondary mb-3;
+    }
+
+    &--title{
+      @apply group-hover:text-accent;
+    }
+  }
+}
+
+.article{
+  @apply py-10 flex flex-col space-y-5;
+
+  h2{
+    @apply pb-5;
+  }
+
+
+}
